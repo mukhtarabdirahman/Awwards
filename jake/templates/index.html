@@ -1,5 +1,18 @@
+
 {%extends 'base.html'%}
+{% load static %}
 
 {% block content %}
 {{block.super}}
+{% for post in posts %}
+<div class="container">
+  <div class="card">
+    <h5 class="card-header"> {{post.user.username}} {{post.user}}</h5>
+    
+  <img class="" src="{{ post.image.url }}" alt="hey">
+  <div class="card-body">
+  </div>
+</div>
+</div>
+   {% endfor %}
 {% endblock %}

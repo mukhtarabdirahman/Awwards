@@ -1,4 +1,4 @@
-#!/home/ahmed/Desktop/awrd/virtual/bin/python3.6
+#!/home/ahmed/Desktop/awrd/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

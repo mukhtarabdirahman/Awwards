@@ -1,3 +1,14 @@
+<!-- <nav class="navbar navbar-dark default-color justify-content-between">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <form class="form-inline my-1">
+    <div class="md-form form-sm my-0">
+      <input class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search"
+        aria-label="Search">
+    </div>
+    <button class="btn btn-outline-white btn-sm my-0" type="submit">Search</button>
+  </form>
+</nav> -->
+
 <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
   <a class="navbar-brand" href="#">Navbar</a>
@@ -8,23 +19,40 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <div class="col-sm-6 col-md-6">
+          {% if user.is_authenticated %}
+          <ul>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn btn-warningt" data-toggle="dropdown" role="button" aria-expanded="false">Account<span class="caret"></span>
+                    </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="">Home</a>
+                </li>
+                <li>
+                  <a href="/accounts/password/change">Change Password</a>
+                </li>
+                <li>
+                  <a href="/logout">Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          {% else %}
+          <li>
+            <a class='btn btn-default' href="/accounts/login">Login</a>
+          </li>
+
+          {% endif %}
+        </div>
       </li>
     </ul>
-    <div class="md-form form-sm my-0">
-      <input class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search"
-        aria-label="Search">
-    </div>
-    <button class="btn btn-outline-white btn-sm my-0" type="submit">Search</button>
-  </form>
-  </div>
+    <form class="form-inline my-1">
+      <div class="md-form form-sm my-0">
+        <input class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search"
+          aria-label="Search">
+      </div>
+      <button class="btn btn-outline-white btn-sm my-0" type="submit">Search</button>
+    </form>
 </nav>
 <!--/.Navbar -->

@@ -15,3 +15,8 @@ class PostPictureForm(forms.ModelForm):
         model = Image
         fields = ['caption', 'name', 'link','image']
 
+
+class RateForm(forms.ModelForm):
+  class Meta:
+    model = Rating
+    exclude = ['user','post']

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Image
+from .models import Image ,Rating
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -14,3 +14,4 @@ class PostPictureForm(forms.ModelForm):
     class Meta:
         model = Image
         fields = ['caption', 'name', 'link','image']
+

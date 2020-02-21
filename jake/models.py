@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-
+from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 class Profile(models.Model):
     profilePic = models.ImageField(upload_to='profile/',null=True)
@@ -37,7 +37,7 @@ class Image(models.Model):
     # profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
     likes = models.PositiveIntegerField(default=0)
     link = models.CharField(max_length=100)
-    
+
     def __str__(self):
         return self.caption
     class Meta:
@@ -63,3 +63,9 @@ class Image(models.Model):
     def get_image_by_id(cls,id):
         image = Image.objects.filter(id=Image.id)
         return image
+
+
+class Rating(models.Model):
+  image = models.ForeignKey(Image, on_delete = models.CASCADE)
+  user = models.ForeignKey(User, on_delete = models.CASCADE)
+  stars = models.IntegerField(validators = [MinValueValidator(1),MaxValueValidator(5)])

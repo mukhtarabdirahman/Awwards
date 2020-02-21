@@ -13,4 +13,4 @@ class UserRegisterForm(UserCreationForm):
 class PostPictureForm(forms.ModelForm):
     class Meta:
         model = Image
-        fields = ['caption', 'image']
+        fields = ['caption', 'name','image']

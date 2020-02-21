@@ -55,3 +55,6 @@ pytz==2018.5
 * HTML5
 * Bootstrap 4 and Bootstrap 3
 * css
+
+## Support and contact details
+If you have any queries regarding the instagram site,Please feel free to contact #Team mukhtar through mukhtarabdirahmanm@gmail.com and we will be happy to look into your query

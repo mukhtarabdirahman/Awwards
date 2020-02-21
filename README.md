@@ -1,4 +1,5 @@
 # Awward
+- This project allows users to post their projects for other users to rate according to design, usability and content
 ## Ahmed Mukhtar
 
 ### By **AHMED MUKHTAR**

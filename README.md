@@ -25,3 +25,18 @@
 * Rubn the app by `python3 manage.py runserver`
 * Go to your browser and open the link http://127.0.0.1:8000 or http:///localhost:8000**
 * Enjoy the App :-)...
+
+### Important packages used in app development.
+
+```
+confusable-homoglyphs==3.1.1
+Django==1.11
+django-bootstrap3==10.0.1
+django-registration==2.4.1
+django-tinymce==2.7.0
+gunicorn==19.9.0
+Pillow==5.2.0
+psycopg2==2.7.5
+python-decouple==3.1
+pytz==2018.5
+```

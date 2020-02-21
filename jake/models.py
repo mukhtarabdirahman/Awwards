@@ -38,7 +38,10 @@ class Image(models.Model):
     likes = models.PositiveIntegerField(default=0)
     link = models.CharField(max_length=100)
 
-
+    @classmethod
+    def search_by_name(cls,search_term):
+        jake = cls.objects.filter(name__icontains=search_term)
+        return jake
 
     def no_of_ratings(self):
         ratings = Rating.objects.filter(image=self)

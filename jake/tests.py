@@ -32,3 +32,24 @@ class ArticleTestClass(TestCase):
         self.new_article.save()
 
         self.new_article.tags.add(self.new_tag)
+
+    def tearDown(self):
+        Editor.objects.all().delete()
+        tags.objects.all().delete()
+        Article.objects.all().delete()
+        
+    def test_get_news_today(self):
+        today_news = Article.todays_news()
+        self.assertTrue(len(today_news)>0)
+        
+    def todays_news(cls):
+        today = dt.date.today()
+        news = cls.objects.filter(pub_date__date = today)
+        return news
+    
+    
+    def test_get_news_by_date(self):
+        test_date = '2017-03-17'
+        date = dt.datetime.strptime(test_date, '%Y-%m-%d').date()
+        news_by_date = Article.days_news(date)
+        self.assertTrue(len(news_by_date) == 0)

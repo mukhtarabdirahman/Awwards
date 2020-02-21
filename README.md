@@ -40,3 +40,9 @@ psycopg2==2.7.5
 python-decouple==3.1
 pytz==2018.5
 ```
+## Award Specifications.
+
++ Project posted are displayed from the most recent.
++ The user can see the description of a certain project
++ The user sees the details of the project 
++ The user can also view project posted on other days

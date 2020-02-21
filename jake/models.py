@@ -38,6 +38,22 @@ class Image(models.Model):
     likes = models.PositiveIntegerField(default=0)
     link = models.CharField(max_length=100)
 
+
+
+    def no_of_ratings(self):
+        ratings = Rating.objects.filter(image=self)
+        return len(ratings)
+
+    def avg_rating(self):
+        sum = 0
+        ratings = Rating.objects.filter(image=self)
+        for rating in ratings:
+            sum += rating.stars
+        if len(ratings) > 0:
+            return ' '.join(['Average rating',str(sum / len(ratings))])
+        else:
+            return 'No ratings yet'
+
     def __str__(self):
         return self.caption
     class Meta:

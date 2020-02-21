@@ -19,4 +19,4 @@ class PostPictureForm(forms.ModelForm):
 class RateForm(forms.ModelForm):
   class Meta:
     model = Rating
-    exclude = ['user','post']
+    exclude = ['user','image']

@@ -46,3 +46,12 @@ pytz==2018.5
 + The user can see the description of a certain project
 + The user sees the details of the project 
 + The user can also view project posted on other days
+
+## Known Bugs and Development
+* If you run the application in any version of python lower than 3.5.6 you will experiece errors...Alot of them
+## Technologies Used
+* python3.6.8
+* Django
+* HTML5
+* Bootstrap 4 and Bootstrap 3
+* css

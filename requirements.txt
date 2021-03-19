@@ -1,13 +1,14 @@
+-i https://pypi.org/simple/
 astroid==2.3.3
 confusable-homoglyphs==3.2.0
-Django==1.11
 django-bootstrap3==12.0.3
 django-registration==2.4.1
+django==1.11
 gunicorn==20.0.4
 isort==4.3.21
 lazy-object-proxy==1.4.3
 mccabe==0.6.1
-Pillow==7.0.0
+pillow==8.1.1
 pylint==2.4.4
 pytz==2019.3
 six==1.14.0
